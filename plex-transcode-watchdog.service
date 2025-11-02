@@ -1,0 +1,11 @@
+[Unit]
+Description=Plex Transcoder Watchdog
+
+[Service]
+Type=oneshot
+Environment=CONTAINER=plex
+Environment=TRANSCODE_DIR_HOST=/home/deadwire/plex/transcode
+Environment=STALE_MINUTES=10
+Environment=LOG_WINDOW=10m
+EnvironmentFile=/etc/plex-watchdog/env
+ExecStart=/usr/local/bin/plex-transcode-watchdog.sh

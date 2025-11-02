@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Plex Transcoder Watchdog every 5 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Unit=plex-transcode-watchdog.service
+
+[Install]
+WantedBy=timers.target
