@@ -4,6 +4,14 @@ This contains my service files for re-rolling my Plex container in the event tha
 
 Plex API Token goes here: /etc/plex-watchdog/env
 
+Use:
+
+```bash
+sudo mkdir -p /etc/plex-watchdog
+printf "PLEX_TOKEN=your_token_here" | sudo tee /etc/plex-watchdog/env >/dev/null
+sudo chmod 600 /etc/plex-watchdog/env
+```
+
 Timer and Service files go here: /etc/systemd/system/
 
 WatchDog Script goes here: /usr/local/bin/
